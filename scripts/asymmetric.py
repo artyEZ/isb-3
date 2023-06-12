@@ -9,11 +9,6 @@ logger.setLevel('INFO')
 
 
 class Asymmetric:
-    def __init__(self, settings: dict) -> None:
-        self.settings = settings
-        logging.info(
-            'Settings for asymmetric encryption have been successfully applied')
-        
     def generate_asymmetric_keys(self) -> tuple:
         """The function generates an asymmetric key for asymmetric encryption algorithm.
 

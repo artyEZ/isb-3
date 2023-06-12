@@ -65,7 +65,7 @@ class CryptoSystemGUI(QMainWindow):
             key_length = int(self.key_length_input.text())
         except Exception as err:
             QMessageBox.information(
-                self, 'Key Generation', f'Something went wrong.\n{err.__str__}')
+                self, 'Key Generation', f'Something went wrong.\n{err}')
             return
         try:
             self.hybrid.create_and_save_keys(key_length)
@@ -86,7 +86,7 @@ class CryptoSystemGUI(QMainWindow):
             self.hybrid.encryption_text()
         except Exception as err:
             QMessageBox.information(
-                self, 'Encrypt', f'Something went wrong.\n{err.__str__}')
+                self, 'Encrypt', f'Something went wrong.\n{err}')
         else:
             QMessageBox.information(self, 'File Encryption',
                                     'File has been successfully encrypted.')
@@ -101,7 +101,7 @@ class CryptoSystemGUI(QMainWindow):
             self.hybrid.decryption_text()
         except Exception as err:
             QMessageBox.information(
-                self, 'Decrypt', f'Something went wrong.\n{err.__str__}')
+                self, 'Decrypt', f'Something went wrong.\n{err}')
         else:
             QMessageBox.information(self, 'File Decryption',
                                     'File has been successfully decrypted.')

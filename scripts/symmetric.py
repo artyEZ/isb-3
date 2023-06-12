@@ -8,11 +8,6 @@ logger.setLevel('INFO')
 
 
 class Symmetric:
-    def __init__(self, settings: dict) -> None:
-        self.settings = settings
-        logging.info(
-            'Settings for symmetric encryption have been successfully applied')
-
     def generate_symmetric_key(self, length: int) -> bytes:
         """The function generates a symmetric key for symmetric encryption algorithm.
 

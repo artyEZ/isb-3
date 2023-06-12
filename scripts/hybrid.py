@@ -24,9 +24,11 @@ class Hybrid:
                 f'Encryption settings were not applied.\nError:{err}')
             raise
         try:
-            self.symmetric_sys = Symmetric(self.settings)
-            self.asymmetric_sys = Asymmetric(self.settings)
+            self.symmetric_sys = Symmetric()
+            self.asymmetric_sys = Asymmetric()
         except Exception as err:
+            logging.warning(
+                f'Symmetric and asymmetric algorithms did not apply.\nError:{err}')
             raise
 
     def create_and_save_keys(self, length: int) -> None:
